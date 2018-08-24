@@ -34,11 +34,11 @@ from property import save_property
 # Global variables
 
 # File paths
-TRAIN_CSV = '/data/caohao/train.csv'
-EMBEDDING_FILE01 = '/data/caohao/GoogleNews-vectors-negative300.bin'
-EMBEDDING_FILE02 = '/data/caohao/wiki-news-300d-1M.vec.bin'
+TRAIN_CSV = '.../train.csv'
+EMBEDDING_FILE01 = '.../GoogleNews-vectors-negative300.bin'
+EMBEDDING_FILE02 = '.../wiki-news-300d-1M.vec.bin'
 MODEL_SAVING_DIR = 'models/'
-PROPERTY_PATH = '/data/caohao/property.pkl'
+PROPERTY_PATH = '.../property.pkl'
 
 # Create embedding matrix
 
@@ -156,7 +156,7 @@ p = Property(vocabulary, inverse_vocabulary, max_seq_length)
 save_property(p, PROPERTY_PATH)
 
 # Split to train validation
-validation_size = 40000
+validation_size = 500
 training_size = len(train_df) - validation_size
 
 X = train_df[questions_cols]
