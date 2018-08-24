@@ -64,8 +64,8 @@ def rand_select_testset(questions_path, n, output):
 
 
 if __name__ == '__main__':
-    input = '最新待测试train.csv'
-    questions_output = 'questions.csv'
+    input = '.../train.csv'
+    questions_output = '.../questions.csv'
     # save_all_questions(input, questions_output)
 
     test_output = "test.csv"
