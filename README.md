@@ -1,6 +1,8 @@
 newMaLSTM model 
 ===============
-This project is based on the Siamese LSTM network + attention mechanism + Manhattan distance to achieve the similarity calculation The training data includes: 
+This project is based on the Siamese LSTM network + attention mechanism + Manhattan distance to achieve the similarity calculation. 
+
+The training data includes: 
 
 (1) Quora sentence data on Kaggle, about 400,000 groups, positive and negative sample ratio 1:1.7 
 
