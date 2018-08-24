@@ -25,3 +25,27 @@ Word embedding file:
 •	word2vec:	GoogleNews-vectors-negative300.bin
 
 •	fastText  :	wiki-news-300d-1M.vec.bin
+
+Apply:
+------
+
+• Training
+
+` `` Bash
+<p>$ python3 newMaLSTM.py</p>
+<p>$ type w2v or ft for choosing word embedding file</p>
+` ``
+` ``
+
+• Spliting data
+
+` `` Bash
+<p>$ python3 data_helper.py</p>
+` ``
+` ``
+
+• Find the most similar existing question for a new question
+` `` Bash
+<p>$ python3 test.py</p>
+` ``
+` ``
