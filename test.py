@@ -27,7 +27,7 @@ THRESHOD = 0.5
 # File paths
 QUESTIONS_CSV = 'questions.csv'
 TEST_CSV = 'test.csv'
-EMBEDDING_FILE = '/Users/liwei/Documents/machine-learning/word2vec/GoogleNews-vectors-negative300.bin'
+EMBEDDING_FILE = '/data/caohao/GoogleNews-vectors-negative300.bin'
 #EMBEDDING_FILE = '.../home/Medium/wiki-news-300d-1M.vec'
 MODEL_SAVING_DIR = 'models/'
 MODEL_NAME = 'weights.h5'
