@@ -18,6 +18,6 @@ Reference:
 
 Word embedding file:
 --------------------
-•	word2vec:	GoogleNews-vectors-negative300.bin.gz
+•	word2vec:	GoogleNews-vectors-negative300.bin
 
-•	fastText  :	wiki-news-300d-1M.vec.zip
+•	fastText  :	wiki-news-300d-1M.vec.bin
