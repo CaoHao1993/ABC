@@ -31,7 +31,7 @@ Apply:
 
 • Training
 
-``` Bash
+``` 
 $ python3 newMaLSTM.py
 $ type w2v or ft for choosing word embedding file
 ```
@@ -39,13 +39,13 @@ $ type w2v or ft for choosing word embedding file
 
 • Spliting data
 
-``` Bash
+``` 
 $ python3 data_helper.py
 ```
 
 
 • Find the most similar existing question for a new question
-``` Bash
+``` 
 $ python3 test.py
 ```
 
