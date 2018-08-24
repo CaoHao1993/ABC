@@ -25,10 +25,10 @@ from property import load_property
 THRESHOD = 0.5
 
 # File paths
-QUESTIONS_CSV = 'questions.csv'
-TEST_CSV = 'test.csv'
-EMBEDDING_FILE = '/data/caohao/GoogleNews-vectors-negative300.bin'
-#EMBEDDING_FILE = '/data/caohao/wiki-news-300d-1M.vec'
+QUESTIONS_CSV = '.../questions.csv'
+TEST_CSV = '.../test.csv'
+EMBEDDING_FILE = '.../GoogleNews-vectors-negative300.bin'
+#EMBEDDING_FILE = '.../wiki-news-300d-1M.vec.bin'
 MODEL_SAVING_DIR = 'models/'
 MODEL_NAME = 'weights.h5'
 PROPERTY_PATH = 'property.pkl'
