@@ -31,21 +31,21 @@ Apply:
 
 • Training
 
-` `` Bash
+``` Bash
 <p>$ python3 newMaLSTM.py</p>
 <p>$ type w2v or ft for choosing word embedding file</p>
-` ``
+```
 
 
 • Spliting data
 
-` `` Bash
+``` Bash
 <p>$ python3 data_helper.py</p>
-` ``
+```
 
 
 • Find the most similar existing question for a new question
-` `` Bash
+``` Bash
 <p>$ python3 test.py</p>
-` ``
+```
 
