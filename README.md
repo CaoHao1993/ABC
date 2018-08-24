@@ -10,6 +10,8 @@ The training data includes:
 
 (3) SemEval 2014 train data, about 5,000 groups
 
+The first two files are too large, only the third one is uploaded here as an example
+
 Reference:
 ----------
 •	[Siamese Recurrent Architectures for Learning Sentence Similarity](http://www.mit.edu/~jonasm/info/MuellerThyagarajan_AAAI16.pdf)
