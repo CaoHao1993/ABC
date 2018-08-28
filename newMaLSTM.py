@@ -20,7 +20,7 @@ import keras
 
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Model
-from keras.layers import Input, Embedding, LSTM, Merge, Dense, Flatten, Activation, Bidirectional, RepeatVector, Permute, Lambda, TimeDistributed
+from keras.layers import Input, Embedding, LSTM, Dense, Flatten, Activation, Bidirectional, RepeatVector, Permute, Lambda, TimeDistributed
 from keras.layers.merge import multiply, concatenate
 from ManDist import ManDist
 import keras.backend as K
@@ -222,8 +222,8 @@ def shared_lstm(_input):
 left_sent_representation = shared_lstm(left_input)
 right_sent_representation = shared_lstm(right_input)
 
-malstm_distance = ManDist()([left_sen_representation, right_sen_representation])
-sen_representation = concatenate([left_sen_representation, right_sen_representation, malstm_distance])
+malstm_distance = ManDist()([left_sent_representation, right_sent_representation])
+sen_representation = concatenate([left_sent_representation, right_sent_representation, malstm_distance])
 similarity = Dense(1, activation='sigmoid')(Dense(2)(Dense(4)(Dense(16)(sen_representation))))
 
 # Pack it all up into a model
