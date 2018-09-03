@@ -4,7 +4,7 @@ This project is based on the Siamese LSTM network + attention mechanism + Manhat
 
 The training data includes: 
 
-(1) Quora sentence data on Kaggle, about 400,000 groups, positive and negative sample ratio 1:1.7 
+(1) [Quora sentence data on Kaggle, about 400,000 groups, positive and negative sample ratio 1:1.7](https://www.kaggle.com/c/quora-question-pairs/data)
 
 (2) Stack overflow data, about 350,000 groups 
 
@@ -22,9 +22,14 @@ Reference:
 
 Word embedding file:
 --------------------
-•	word2vec:	GoogleNews-vectors-negative300.bin
+•	word2vec:	[GoogleNews-vectors-negative300.bin](https://github.com/mmihaltz/word2vec-GoogleNews-vectors/blob/master/GoogleNews-vectors-negative300.bin.gz)
 
-•	fastText  :	wiki-news-300d-1M.vec.bin
+•	fastText:	[wiki-news-300d-1M.vec.bin](https://fasttext.cc/docs/en/english-vectors.html)
+
+Language model:
+---------------
+•	ULMFiT: [wikitext103](http://files.fast.ai/models/wt103)
+
 
 Apply:
 ------
