@@ -89,7 +89,7 @@ def text_to_word_list(text):
     return text
 
 # Prepare embedding
-o = raw_input("type w2v or ft for choosing pre-trained word2vec or fasttext:")
+o = input("type w2v or ft for choosing pre-trained word2vec or fasttext:")
 if o == 'w2v':
 	print("Loading word2vec model(it may takes several mins) ...")
 	vocabulary = dict()
