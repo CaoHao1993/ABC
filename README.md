@@ -36,11 +36,14 @@ Apply:
 • Training
 
 ``` 
+1.word embedding file as pre-trained
 $ python3 newMaLSTM.py
 $ type w2v or ft for choosing word embedding file
 ```
-
-
+```
+2.language model as pre-trained
+$ python3 wiki103.py
+```
 • Spliting data
 
 ``` 
