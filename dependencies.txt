@@ -1,7 +1,7 @@
 The following are python modules. Most of them can be installed using "sudo pip install modulename".
 
 pandas
-gevent
+re
 stop-words
 keras
 sklearn
