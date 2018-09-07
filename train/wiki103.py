@@ -1,5 +1,6 @@
 # # CODE
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0" #USE GPU
 from time import time
 import pandas as pd
 import pickle
@@ -31,11 +32,11 @@ from property import save_property
 # Global variables
 
 # File paths
-TRAIN_CSV = '/home/ch/data/Quora.csv'
-EMBEDDING_FILE = '/home/ch/data/fwd_wt103.h5'
+TRAIN_CSV = '.../train.csv'
+EMBEDDING_FILE = '.../fwd_wt103.h5'
 
 MODEL_SAVING_DIR = 'models/'
-PR_PATH = '/home/ch/data/itos_wt103.pkl'
+PR_PATH = '.../itos_wt103.pkl'
 
 # Create embedding matrix
 
@@ -89,7 +90,7 @@ def text_to_word_list(text):
 vocabulary = dict()
 #vocabulary = pickle.load((PR_PATH).open('rb'))
 inverse_vocabulary = ['<unk>']
-wgts = torch.load(EMBEDDING_FILE, map_location='cpu')
+wgts = torch.load(EMBEDDING_FILE, map_location=lambda storage, loc: storage.cuda(0))
 
 questions_cols = ['orTitle', 'dqTitle']
 
@@ -134,6 +135,8 @@ def to_np(v):
     if isinstance(v, torch.FloatTensor): v=v.float()
     return v.cpu().numpy()
 
+def is_half_tensor(v):
+    return isinstance(v, torch.cuda.HalfTensor)
 
 enc_wgts = to_np(wgts['0.encoder.weight'])
 row_m = enc_wgts.mean(0)
@@ -164,7 +167,7 @@ print("max_seq_length: " + str(max_seq_length))
 #save_property(p, PROPERTY_PATH)
 
 # Split to train validation
-validation_size = 1000
+validation_size = 40000
 training_size = len(train_df) - validation_size
 
 X = train_df[questions_cols]
@@ -246,7 +249,7 @@ malstm.compile(loss='mean_squared_error', optimizer=optimizer, metrics=['accurac
 model_checkpoint = ModelCheckpoint('weights.h5', monitor='val_loss', save_best_only=True)
     
 # csv logger
-csv_logger = CSVLogger('log10.csv', append=True, separator=',')
+csv_logger = CSVLogger('log.csv', append=True, separator=',')
 
 # Start training
 print('Training...')
