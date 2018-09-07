@@ -22,12 +22,10 @@ from keras.layers import Input, Embedding, LSTM, Merge, Dense, Flatten, Activati
 from keras.layers.merge import multiply, concatenate
 from ManDist import ManDist
 import keras.backend as K
-#from keras.optimizers import Adadelta
 from keras.callbacks import ModelCheckpoint, CSVLogger
 
 from property import Property
 from property import save_property
-
 
 # Global variables
 
@@ -153,7 +151,6 @@ for index,word in enumerate(vocabulary):
 
 del wgts
 
-
 # Prepare training and validation data
 print('Preparing training and validation data...')
 max_seq_length = max(train_df.orTitle.map(lambda x: len(x)).max(),
@@ -186,7 +183,6 @@ Y_validation = Y_validation.values
 # Zero padding
 for dataset, side in itertools.product([X_train, X_validation], ['left', 'right']):
     dataset[side] = pad_sequences(dataset[side], maxlen=max_seq_length)
-
 
 # Make sure everything is ok
 assert X_train['left'].shape == X_train['right'].shape
