@@ -1,0 +1,12 @@
+The following are python modules. Most of them can be installed using "sudo pip install modulename".
+
+pandas
+gevent
+stop-words
+keras
+sklearn
+gensim
+itertools
+pytorch
+tensorflow
+nltk
